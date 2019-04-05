@@ -1454,6 +1454,9 @@ body.outlook p {
                                       <td class="expander"></td>
                                     </tr>
                                   </table>
+                                  <h4>Our database schematics:</h4>
+                                  <center data-parsed=""> <img src="https://i.ibb.co/g7Xgvzg/db-scheme.png" align="center" class="float-center"> </center>
+                                  
                                 </th>
                                 <th class="expander"></th>
                               </tr>
