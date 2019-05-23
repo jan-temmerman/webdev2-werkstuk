@@ -1,12 +1,30 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito|Noto+Sans+KR:300,400,700');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Import style files
+@import './header.scss';
+@import './home.scss';
+@import './layout.scss';
+@import './projects.scss';
+
+// Global styles
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans Kr', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
 .navbar-laravel {
   background-color: #fff;
