@@ -17,11 +17,11 @@ class CreateGiftsTable extends Migration
             $table->increments('id');
 
             $table->integer('project_id')->unsigned();
-            $table->foreign('project_id')->references('id')->on('projects');
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('reward_id')->unsigned();
-            $table->foreign('reward_id')->references('id')->on('rewards');
+            $table->foreign('reward_id')->references('id')->on('rewards')->onDelete('cascade');
 
             $table->integer('amount');
 

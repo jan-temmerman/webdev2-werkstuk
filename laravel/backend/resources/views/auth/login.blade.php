@@ -57,7 +57,7 @@
                                     {{ __('Login') }}
                                 </button>
                                 or
-                                <a href="/register" type="submit" class="btn">
+                                <a href="/register" class="btn">
                                     {{ __('Register') }}
                                 </a>
 

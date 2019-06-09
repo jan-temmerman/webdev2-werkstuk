@@ -17,14 +17,14 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
 
             $table->integer('cat_id')->unsigned();
-            $table->foreign('cat_id')->references('id')->on('category');
+            $table->foreign('cat_id')->references('id')->on('category')->onDelete('cascade');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->string('title');
             $table->text('intro');
             $table->integer('goal');
-            $table->integer('budget');
+            $table->integer('budget')->default(0);
             $table->date('end_date');
 
             $table->timestamps();

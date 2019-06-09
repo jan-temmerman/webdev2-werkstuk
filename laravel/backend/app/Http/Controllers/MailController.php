@@ -6,11 +6,10 @@ use App\Mail\Add;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-class AddController extends Controller
+class MailController extends Controller
 {
-    public function sendAdd()
+    public function sendReward($rewardName, $user)
     {
         Mail::to("temmjan@gmail.com", "Jan Temmerman")->send(new Add());
-        return view('emails.add');
     }
 }

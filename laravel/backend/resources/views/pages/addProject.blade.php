@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <div class="medium-12  columns">
-                            <button class="button success hollow" type="submit">BEWAAR</button>
+                            <button class="button success hollow" type="submit">NEXT</button>
                         </div>
                     </div>
                 </form>

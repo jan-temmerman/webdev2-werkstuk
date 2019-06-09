@@ -9,6 +9,11 @@
     color: white;
 }
 
+.a-button__delete {
+    background-color: transparent;
+    border: none;
+}
+
 .a-profile__button:hover {
     color: white;
     background-color: $primary-blue;
@@ -23,6 +28,10 @@
     padding: 10px;
     text-align: center;
     align-self: center;
+    color: white;
+}
+
+.a-profile__button--danger:hover {
     color: white;
 }
 

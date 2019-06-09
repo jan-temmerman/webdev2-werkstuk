@@ -17,7 +17,7 @@
         {{ __('Logout') }}
         </a>
         <a class="a-profile__button" href="{{ route('user.payment') }}">Get Credits</a>
-        <a class="a-profile__button--danger" href="/">Delete account</a>
+        <a class="a-profile__button--danger" href="{{ route('user.delete') }}">Delete account</a>
     </div>
 
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -50,7 +50,7 @@
             <form action="/profile/delete_project/{{ $project->id }}" method="POST">
             @method('DELETE')
             @csrf
-            <button type="submit"><img class="a-profile__icon" src="{{ asset('storage/images/delete.png') }}" alt="delete"></button>               
+            <button type="submit" class="a-button__delete"><img class="a-profile__icon" src="{{ asset('storage/images/delete.png') }}" alt="delete"></button>               
             </form>
         </div>
     </div>

@@ -12,25 +12,18 @@
         </div>
     </div>
 
-    @if(Session::has('notification'))
-        <div class="notification is-{{ Session::get('notification') }}">
-            {{ Session::get('message') }}
-        </div>
-    @endif
-
-
     <div class="columns is-desktop">
         <div class="column">
             <form action="{{route('projects.upload')}}" method="post" enctype="multipart/form-data">
                 @csrf
 
-                <input type="hidden" id="amountOfImages" name="amountOfImages" value="{{ old('amountOfImages', 2) }}">
+                <input type="hidden" id="amountOfImages" name="amountOfImages" value="{{ old('amountOfImages', 1) }}">
                 
                 <table id="imageUploadTable" class="table is-striped">
                     <tbody>
                         <tr id="first">
                             <td>
-                                <input type="file" name="file[]">
+                                <input type="file" name="file[]" multiple >
                             </td>
                             <td>
                                 <div class="control">
@@ -57,19 +50,10 @@
 
                 <div class="control">
                     <button type="submit" class="button is-primary">
-                        Complete
+                        NEXT
                     </button>
                 </div>
             </form>
-
-            <form action="{{route('projects.another_upload')}}" method="post" enctype="multipart/form-data">
-                @csrf
-                    <div class="control">
-                        <button type="submit" class="button is-primary">
-                            Add another image
-                        </button>
-                    </div>
-                </form>
 
             @if(count($errors) > 0)
             <div class="notification is-danger">
@@ -80,6 +64,7 @@
             </div>
 
             @endif
+            <div style="height:1px; margin-bottom:56vh;"></div>
         </div>
     </div> 
 </div>

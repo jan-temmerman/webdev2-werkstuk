@@ -5,7 +5,7 @@
 <div class="a-post__divider"></div>
 <div class="m-categories__container">
 @foreach($categories as $category)
-<a class="a-category" href="/">{{ $category->name }}</a>
+<a class="a-category" href="{{route('pages.catProjects', $category->name)}}">{{ $category->name }}</a>
 @endforeach
 </div>
 
@@ -13,6 +13,7 @@
 <div class="a-post__divider"></div>
 <div class="o-projects__container">
 @foreach($projects as $project)
+    <a class="m-linkToProject" href="{{ route('pages.projectDetail', $project->id) }}">
     <div class="o-post__container">
     <div class="a-post__image" style="background-image: url('{{ asset($project->projectimages->first()['image'] . '/' .$project->projectimages->first()['title'])}}')"></div>
         <div class="m-post__info">
@@ -36,6 +37,7 @@
             </div>
         </div>
     </div>
+</a>
 @endforeach
 </div>
 

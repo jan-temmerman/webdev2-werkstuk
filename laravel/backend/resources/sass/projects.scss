@@ -19,13 +19,19 @@
 }
   
 .a-project__title {
-  font-size: 18px;  
-  padding: 0 30px;
+  font-size: 18px;
+}
+
+.a-project__subtitle {
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 .a-project__text {
+  height: 20%;
   font-size: 14px;
-  padding: 0 30px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .a-project__image {
@@ -46,4 +52,14 @@
 
 .a-category {
   margin: 0 20px;
+}
+
+.m-pagination__container {
+  align-items: center;
+}
+
+.m-project__infoContainer {
+  height: 60%;
+  width: 100%;
+  padding: 0 20px;
 }
