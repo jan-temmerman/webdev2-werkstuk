@@ -9,8 +9,9 @@
 </head>
     <body>
         @include('partials.header')
-        <div class="o-page--container">
+        <div class="o-page__container">
             @yield('content')
         </div>
+        @include('partials.footer')
     </body>
 </html>

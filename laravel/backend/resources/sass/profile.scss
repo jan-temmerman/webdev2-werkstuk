@@ -1,0 +1,89 @@
+.a-profile__button {
+    margin-top: 20px;
+    align-self: flex-start;
+    margin-right: 20px;
+    background-color: $dark-blue;
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+    color: white;
+}
+
+.a-profile__button:hover {
+    color: white;
+    background-color: $primary-blue;
+    transition: background-color 0.2s ease;
+}
+
+.a-profile__button--danger {
+    margin-top: 20px;
+    align-self: flex-end;
+    margin-left: 40%;
+    background-color: $danger;
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+    color: white;
+}
+
+.m-profile__actions {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.a-profile__subtitle {
+    margin: 20px 0 0 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.a-profile__subtitle:first-child {
+    margin: 0px;
+}
+
+.m-profile__container {
+    display: flex;
+    flex-direction: column;
+    background-color: $light-grey;
+    padding: 20px;
+    margin: 20px 0 60px 0;
+    width: 50%;
+}
+
+.m-profile__projectsContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: $light-grey;
+    margin: 20px 0 60px 0;
+    width: 100%;
+}
+
+.m-profile__projectContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid $secundary-grey;
+    margin: 0;
+}
+
+.m-profile__projectContainer:last-child {
+    border-bottom: none;
+}
+
+.a-profile__projectInfo {
+    width: 18%;
+}
+
+.m-profile__projectActions {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.a-profile__icon {
+    height: 20px;
+    margin-left: 20px;
+}

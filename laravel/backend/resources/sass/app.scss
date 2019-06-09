@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito|Noto+Sans+KR:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800&display=swap');
 
 // Variables
 @import 'variables';
@@ -10,9 +10,11 @@
 
 // Import style files
 @import './header.scss';
+@import './footer.scss';
 @import './home.scss';
 @import './layout.scss';
 @import './projects.scss';
+@import './profile.scss';
 
 // Global styles
 html {
@@ -21,9 +23,19 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans Kr', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
+  color: $primary-grey;
+  min-height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .navbar-laravel {

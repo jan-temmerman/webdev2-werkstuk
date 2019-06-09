@@ -14,25 +14,25 @@
                         <div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right">Name of the project</label>
                             <div class="col-md-6">
-                                <input class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" type="text" value="">
+                                <input class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" type="text" value="{{ old('title', $project->title) }}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right">intro about the project</label>
                             <div class="col-md-6">
-                                <input class="input-lg form-control{{ $errors->has('intro') ? ' is-invalid' : '' }}" name="intro" type="text" value="">
+                                <textarea style="height: 120px;" class="input-lg form-control{{ $errors->has('intro') ? ' is-invalid' : '' }}" name="intro" type="text" value="{{ old('intro', $project->intro) }}"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right">Financial goal</label>
                             <div class="col-md-6">
-                                <input class="form-control{{ $errors->has('goal') ? ' is-invalid' : '' }}" name="goal" type="text" value="">
+                                <input class="form-control{{ $errors->has('goal') ? ' is-invalid' : '' }}" name="goal" type="number" value="{{ old('goal', $project->goal) }}">
                             </div>
                         </div>
                         <div class="form-group row" >
                             <label class="col-md-4 col-form-label text-md-right">End date</label>
                             <div class="col-md-6">
-                                <input class="form-control{{ $errors->has('end_date') ? ' is-invalid' : '' }}" name="end_date" type="date" value="">
+                                <input class="form-control{{ $errors->has('end_date') ? ' is-invalid' : '' }}" name="end_date" type="date" value="{{ old('end_date', $project->end_date) }}">
                             </div>    
                         </div>
                         <div class="form-group row">

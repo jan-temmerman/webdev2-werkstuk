@@ -1,4 +1,4 @@
-.o-projects--container {
+.o-projects__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -6,20 +6,44 @@
   align-items: center;
 }
   
-.m-projects--container {
-  padding: 10px;
-  height: 600px;
-  width: 400px;
-  border-radius: 6px;
-  border: 0.5px solid $secundary-grey ;
-  background-color: 'white';
+.m-projects__container {
+  height: 560px;
+  width: 410px;
+  background-color: $light-grey;
   color: $primary-grey;
-  margin: 20px;
+  margin: 20px 0;
+}
+
+.m-progress__container {
+  align-self: flex-end;
 }
   
-.a-projects--title {
-  
+.a-project__title {
+  font-size: 18px;  
+  padding: 0 30px;
 }
-.a-projects--text {
-  
+
+.a-project__text {
+  font-size: 14px;
+  padding: 0 30px;
+}
+
+.a-project__image {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+}
+
+.m-categories__container {
+  margin: 20px 0 100px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.a-category {
+  margin: 0 20px;
 }

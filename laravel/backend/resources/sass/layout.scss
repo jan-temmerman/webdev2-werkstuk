@@ -1,11 +1,13 @@
-.o-page--container {
+.o-page__container {
     padding: 20px 10vw 0 10vw;
 }
 
-.a-page--title {
-    margin: 10px 10vw 10px 10vw;
+.a-page__title {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.a-page--intro {
-  margin: 10px 10vw 100px 10vw;
+.a-page__intro {
+  margin: 10px 0 100px 0;
 }

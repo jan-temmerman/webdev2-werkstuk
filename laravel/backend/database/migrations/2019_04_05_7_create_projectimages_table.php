@@ -17,7 +17,7 @@ class CreateProjectimagesTable extends Migration
             $table->increments('id');
 
             $table->integer('project_id')->unsigned();
-            $table->foreign('project_id')->references('id')->on('projects');
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
 
             $table->string('image');
             $table->string('title');

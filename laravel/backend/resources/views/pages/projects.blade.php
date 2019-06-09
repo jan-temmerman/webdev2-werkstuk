@@ -1,53 +1,42 @@
 @extends('layouts.layout')
 
 @section('content')
-<h1 class="a-page--title">Projects</h1>
-<p class="a-page--intro">Explore all the coolest projects in this categorie!</p>
-<div class="o-projects--container">
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
+<h1 class="a-page__title">CATEGORIES</h1>
+<div class="a-post__divider"></div>
+<div class="m-categories__container">
+@foreach($categories as $category)
+<a class="a-category" href="/">{{ $category->name }}</a>
+@endforeach
+</div>
+
+<h1 class="a-page__title">LATEST PROJECTS</h1>
+<div class="a-post__divider"></div>
+<div class="o-projects__container">
+@foreach($projects as $project)
+    <div class="o-post__container">
+    <div class="a-post__image" style="background-image: url('{{ asset($project->projectimages->first()['image'] . '/' .$project->projectimages->first()['title'])}}')"></div>
+        <div class="m-post__info">
+            <h2 class="a-post__heading">{{ $project->title }}</h2></h2>
+            <p class="a-post__paragraph">{{ $project->intro }}</p>
+            <div class="m-progress__container">
+                <p class="a-post__info">€{{$project->budget}} of €{{$project->goal}} backed</p>
+
+                <?php
+                $progress = $project->budget / $project->goal * 100;
+
+                $now = date("Y-m-d"); // or your date as well
+                $end_date = $project->end_date;
+                $datediff = date_diff(new DateTime($now),new DateTime($end_date));
+                ?>
+
+                <div class="progress" style="background-color: lightgrey">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width:{{$progress}}%; background-color: #00e50f"></div>
+                </div>
+                <p class="a-post__info">{{ $datediff->days }} days left</p>
+            </div>
+        </div>
     </div>
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
-    </div>
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
-    </div>
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
-    </div>
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
-    </div>
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
-    </div>
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
-    </div>
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
-    </div>
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
-    </div>
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
-    </div>
-    <div class="m-projects--container">
-        <h1 class="a-projects--title">Project </h1>
-        <p class="a-projects--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem inventore enim ex et ratione doloremque ab nostrum animi atque tempora corporis qui quis incidunt distinctio, tempore magni ut laboriosam illo.</p>
-    </div>
+@endforeach
 </div>
 
 @endsection

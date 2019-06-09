@@ -24,4 +24,8 @@ class Projects extends Model
     public function category() {
         return $this->hasOne("App/Models/Category", "cat_id");
     }
+
+    public function projectimages() {
+        return $this->hasMany('App\Models\Projectimages', 'project_id');
+    }
 }
